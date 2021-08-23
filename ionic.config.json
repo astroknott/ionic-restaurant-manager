@@ -1,0 +1,7 @@
+{
+  "name": "ionic-restaurant-manager",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/admin"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Account details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="credentialForm">
+    <ion-item>
+      <ion-input placeholder="Name" formControlName="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
+        placeholder="Email address"
+        formControlName="email"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
+        placeholder="Password"
+        type="password"
+        formControlName="password"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Role</ion-label>
+      <ion-select placeholder="Select Role" formControlName="role">
+        <ion-select-option value="KITCHEN">Kitchen</ion-select-option>
+        <ion-select-option value="SERVICE">Service</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </form>
+
+  <ion-button (click)="createUser()" expand="full">Create</ion-button>
+</ion-content>
